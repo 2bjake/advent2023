@@ -1,7 +1,6 @@
 import Algorithms
 import AdventUtilities
 
-// can this just be a type alias for PositionSequence?
 struct Number: Hashable {
   let start: Position
   let end: Position
