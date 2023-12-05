@@ -26,7 +26,7 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/apple/swift-algorithms", from: "1.0.0"),
-    .package(url: "https://github.com/2bjake/AdventUtilities", branch: "main")
+    .package(name: "AdventUtilities", path: "../AdventUtilities")
   ],
   targets: [
     .executableTarget(
