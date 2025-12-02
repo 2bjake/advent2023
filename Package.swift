@@ -5,7 +5,7 @@ import PackageDescription
 
 // if a specific day needs additional dependencies, add them here. For example:
 // [6 : [.product(name: "Collections", package: "swift-collections")]]
-let dayDependencies: [Int: [Target.Dependency]] = [:]
+let dayDependencies: [Int: [Target.Dependency]] = [11 : [.product(name: "HeapModule", package: "swift-collections")]]
 
 let dayTargets: [Target] = (1...25).map {
   .target(
@@ -25,8 +25,9 @@ let package = Package(
     .executable(name: "Main", targets: ["Main"]),
   ],
   dependencies: [
-    .package(url: "https://github.com/apple/swift-algorithms", from: "1.0.0"),
-    .package(name: "AdventUtilities", path: "../AdventUtilities")
+    .package(url: "https://github.com/apple/swift-algorithms", from: "1.2.0"),
+    .package(name: "AdventUtilities", path: "../AdventUtilities"),
+    .package(url: "https://github.com/apple/swift-collections.git", branch: "main")
   ],
   targets: [
     .executableTarget(
